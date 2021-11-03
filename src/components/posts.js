@@ -27,6 +27,9 @@ const Posts = () => {
         </div>
       ))}
     </div>
+    <div>
+	<Link to={`/create-post`}>Add New Post Here</Link>
+    </div>
   );
 };
 
