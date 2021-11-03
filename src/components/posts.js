@@ -18,18 +18,22 @@ const Posts = () => {
 
   return (
     <div>
-      <h1>Posts</h1>
-      {posts.map((post) => (
-        <div key={post.id}>
-          <h2>
-            <Link to={`/posts/${post.id}`}>{post.title}</Link>
-          </h2>
-        </div>
-      ))}
-    </div>
-    <div>
-	<Link to={`/create-post`}>Add New Post Here</Link>
-    </div>
+      <div>
+        <h1>Posts</h1>
+        {posts.map((post) => (
+          <div key={post.id}>
+            <h2>
+              <Link to={`/posts/${post.id}`}>{post.title}</Link>
+            </h2>
+          </div>
+        ))}
+      </div>
+      <div>
+        <h2>
+  	     <Link to={`/create-post`}>Add New Post Here</Link>
+        </h2> 
+      </div>
+    </div>  
   );
 };
 
