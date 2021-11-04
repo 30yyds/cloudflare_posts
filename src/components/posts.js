@@ -30,7 +30,7 @@ const Posts = () => {
       </div>
       <div>
         <h2>
-  	  <Link to={`/create-post`}>Add New Post Here</Link>
+  	      <Link to={`/create-post`}>Add New Post Here</Link>
         </h2> 
       </div>
     </div>  
