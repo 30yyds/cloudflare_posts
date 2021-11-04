@@ -45,9 +45,9 @@ export default class FormSubmission extends React.Component {
             Create Post
           </button>
         </form>
-        <p>
-          <Link to="/">Go back</Link>
-        </p>
+        // <p>
+        //   <Link to="/">Go back</Link>
+        // </p>
       </div>
     );
   }
