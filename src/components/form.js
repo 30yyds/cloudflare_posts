@@ -8,7 +8,7 @@ export default class FormSubmission extends React.Component {
       <div>
         <form action="https://serverless-api.30yyds.workers.dev/api/create-posts" method="POST">
           <div>
-            <label htmlFor="title">
+            <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
               <h2><center>Title</center></h2>
             </label>
             <div style="width:800px; margin:0 auto;">
@@ -16,7 +16,7 @@ export default class FormSubmission extends React.Component {
             </div>
           </div>
           <div>
-            <label htmlFor="username">
+            <label htmlFor="username" className="block text-sm font-medium text-warm-gray-900">
               <h2><center>Username</center></h2>
             </label>
             <div style="width:800px; margin:0 auto;">
@@ -25,7 +25,7 @@ export default class FormSubmission extends React.Component {
           </div>
           <div className="sm:col-span-10">
             <div className="flex justify-between">
-              <label htmlFor="content">
+              <label htmlFor="content" className="block text-sm font-medium text-warm-gray-900">
                 <h2><center>Post Content</center></h2>
               </label>
             </div>
