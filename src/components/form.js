@@ -11,7 +11,7 @@ export default class FormSubmission extends React.Component {
             <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
               <h2><center>Title</center></h2>
             </label>
-            <div style="width:800px; margin:0 auto;">
+            <div className="mt-1" style="width:800px; margin-left: 30px">
               <input type="text" name="title" id="title" />
             </div>
           </div>
@@ -19,7 +19,7 @@ export default class FormSubmission extends React.Component {
             <label htmlFor="username" className="block text-sm font-medium text-warm-gray-900">
               <h2><center>Username</center></h2>
             </label>
-            <div style="width:800px; margin:0 auto;">
+            <div className="mt-1" style="width:800px; margin-left: 30px">
               <input type="text" name="username" id="username" />
             </div>
           </div>
@@ -29,7 +29,7 @@ export default class FormSubmission extends React.Component {
                 <h2><center>Post Content</center></h2>
               </label>
             </div>
-            <div className="mt-1" style="width:800px; margin:0 auto;">
+            <div className="mt-1" style="width:800px; margin-left: 30px">
               <textarea
                 id="content"
                 name="content"
@@ -41,13 +41,13 @@ export default class FormSubmission extends React.Component {
               />
             </div>
           </div>
-          <button type="submit">
+          <button type="submit" style="width:100px; margin-left: 400px">>
             Create Post
           </button>
         </form>
-        // <p>
-        //   <Link to="/">Go back</Link>
-        // </p>
+        <p>
+          <Link to="/">Go back</Link>
+        </p>
       </div>
     );
   }
