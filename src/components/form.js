@@ -3,7 +3,7 @@ import React from 'react';
 export default class FormSubmission extends React.Component {
 
   render() {
-    return  (
+    return (
       <div>
         <form action="https://serverless-api.30yyds.workers.dev/api/create-posts" method="POST">
           <div>
@@ -11,7 +11,7 @@ export default class FormSubmission extends React.Component {
               <h2><center>Title</center></h2>
             </label>
             <div>
-              <input type="text"/>
+              <input type="text" name="title" />
             </div>
           </div>
           <div>
@@ -19,7 +19,7 @@ export default class FormSubmission extends React.Component {
               <h2><center>Username</center></h2>
             </label>
             <div>
-              <input type="text"/>
+              <input type="text" name="username" />
             </div>
           </div>
           <div className="sm:col-span-10">
@@ -44,6 +44,9 @@ export default class FormSubmission extends React.Component {
             Submit
           </button>
         </form>
+        <p>
+          <Link to="/">Go back</Link>
+        </p>
       </div>
     );
   }
