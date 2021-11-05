@@ -18,9 +18,11 @@ export default class FormSubmission extends React.Component {
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
         body: value
     };
-    fetch(url, requestOptions)
-        .then(response => {return new Response(response)})
-        .catch(error => {return new Response(error)});
+    return (
+      fetch(url, requestOptions)
+          .then(async response => {return new Response(response)})
+          .catch(error => {return new Response(error)});
+    );
   }
 
   render() {
@@ -36,7 +38,7 @@ export default class FormSubmission extends React.Component {
           </label>
           <input border="solid 1px black" type="text" name="username" id="username" placeholder="Enter author name"/>
           <label htmlFor="content" className="block text-sm font-medium text-warm-gray-900">
-            <h2><center>Post Content</center></h2>
+            <h2><center>Content</center></h2>
           </label>
           <textarea
             id="content"
@@ -50,7 +52,7 @@ export default class FormSubmission extends React.Component {
             defaultValue={''}
           />
           <div>
-            <button type="submit">Create Your Post</button>
+            <button type="submit">Create Your Post!</button>
           </div>  
           <div>
             <h2><center><Link to={`/`}>Go Back</Link></center></h2> 
