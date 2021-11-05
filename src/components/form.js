@@ -6,7 +6,7 @@ export default class FormSubmission extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts'
+    const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts';
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
