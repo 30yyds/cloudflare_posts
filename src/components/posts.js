@@ -17,7 +17,7 @@ const Posts = () => {
   }, []);
 
   return (
-    <div style="margin-left:400px">
+    <div>
       <div>
         <h1>Posts</h1>
         {posts.map((post) => (

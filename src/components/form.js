@@ -19,7 +19,7 @@ export default class FormSubmission extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style="margin-left:300px">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Title</center></h2>
@@ -43,7 +43,7 @@ export default class FormSubmission extends React.Component {
             required
             defaultValue={''}
           />
-          <div style="width:800px; margin:0 auto;">
+          <div>
             <button type="submit">Create Your Post</button>
           </div>  
           <div>
