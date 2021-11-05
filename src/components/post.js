@@ -21,9 +21,10 @@ const Post = ({ id }) => {
   return (
     <div>
       <h1>{post.title}</h1>
+      <h2>{post.username}</h2>
       <p>{post.content}</p>
       <p>
-        <Link to="/">Go back</Link>
+        <Link to={`/`}>Go back</Link>
       </p>
     </div>
   );

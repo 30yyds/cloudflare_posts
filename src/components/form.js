@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from "@reach/router";
 
 export default class FormSubmission extends React.Component {
-  
+  constructor(props) {
+     super(props);
+  }
+
   handleSubmit(event) {
     event.preventDefault();
 
@@ -20,15 +23,15 @@ export default class FormSubmission extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form onSubmit={this.handleSubmit.bind(this)} align="center">
           <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Title</center></h2>
           </label>
-          <input border="solid 1px black" type="text" name="title" id="title" />
+          <input border="solid 1px black" type="text" name="title" id="title" placeholder="Enter title" />
           <label htmlFor="username" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Username</center></h2>
           </label>
-          <input border="solid 1px black" type="text" name="username" id="username" />
+          <input border="solid 1px black" type="text" name="username" id="username" placeholder="Enter author name"/>
           <label htmlFor="content" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Post Content</center></h2>
           </label>
