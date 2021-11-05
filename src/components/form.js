@@ -8,9 +8,8 @@ export default class FormSubmission extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
-    const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts';
     
+    const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts';
     const data = new FormData(event.target);
     const value = Object.fromEntries(data.entries());
 
