@@ -7,14 +7,14 @@ export default class FormSubmission extends React.Component {
     return (
       <div>
         <form action="https://serverless-api.30yyds.workers.dev/api/create-posts" method="POST">
-          // <div>
-          //   <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
-          //     <h2><center>Title</center></h2>
-          //   </label>
-          //   <div className="mt-1" style="width:800px; margin-left: 30px">
-          //     <input type="text" name="title" id="title" />
-          //   </div>
-          // </div>
+          <div>
+            <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
+              <h2><center>Title</center></h2>
+            </label>
+            <div className="mt-1" style="width:800px; margin-left: 30px">
+              <input type="text" name="title" id="title" />
+            </div>
+          </div>
           // <div>
           //   <label htmlFor="username" className="block text-sm font-medium text-warm-gray-900">
           //     <h2><center>Username</center></h2>
