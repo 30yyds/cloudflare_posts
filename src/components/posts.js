@@ -17,8 +17,8 @@ const Posts = () => {
   }, []);
 
   return (
-    <div>
-      <div style="width:800px; margin:0 auto;">
+    <div style="margin-left:400px">
+      <div>
         <h1>Posts</h1>
         {posts.map((post) => (
           <div key={post.id}>
@@ -28,7 +28,7 @@ const Posts = () => {
           </div>
         ))}
       </div>
-      <div style="width:800px; margin:0 auto;">
+      <div>
         <h2>
   	      <Link to={`/create-post`}>Add New Post Here</Link>
         </h2> 
