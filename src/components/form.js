@@ -15,7 +15,7 @@ export default class FormSubmission extends React.Component {
 
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
         body: value
     };
     fetch(url, requestOptions)
