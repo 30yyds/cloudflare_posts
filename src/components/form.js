@@ -10,10 +10,13 @@ export default class FormSubmission extends React.Component {
     event.preventDefault();
 
     const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts';
+    constant data = new FormData(event.target);
+    console.log(data)
+
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(this.state)
+        body: data
     };
     fetch(url, requestOptions)
         .then(response => console.log('Created post successfully'))
