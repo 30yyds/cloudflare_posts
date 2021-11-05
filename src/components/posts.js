@@ -23,7 +23,7 @@ const Posts = () => {
         {posts.map((post) => (
           <div key={post.id}>
             <h2>
-              <Link to={`/posts/${post.id}`}>{post.title} by {post.username}</Link>
+              <Link to={`/posts/${post.id}`}>{post.title}</Link> by {post.username}
             </h2>
           </div>
         ))}

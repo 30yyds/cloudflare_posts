@@ -20,7 +20,7 @@ export default class FormSubmission extends React.Component {
     };
     fetch(url, requestOptions)
         .then(response => {return new Response(response)})
-        .catch(error => console.log('Form submit error', error));
+        .catch(error => {return new Response(error)});
   }
 
   render() {
