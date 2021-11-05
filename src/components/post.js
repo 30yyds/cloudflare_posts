@@ -19,7 +19,7 @@ const Post = ({ id }) => {
   if (!Object.keys(post).length) return <div />;
 
   return (
-    <div>
+    <div style="width:800px; margin:0 auto;">
       <h1>{post.title}</h1>
       <p>{post.content}</p>
       <p>

@@ -14,8 +14,8 @@ export default class FormSubmission extends React.Component {
     };
     fetch(url, requestOptions)
         .then(response => console.log('Created post successfully'))
-        .catch(error => console.log('Form submit error', error))
-  };
+        .catch(error => console.log('Form submit error', error));
+  }
 
   render() {
     return (
