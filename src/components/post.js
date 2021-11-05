@@ -19,9 +19,9 @@ const Post = ({ id }) => {
   if (!Object.keys(post).length) return <div />;
 
   return (
-    <div>
+    <div align="center">
       <h1>{post.title}</h1>
-      <h2>{post.username}</h2>
+      <h2>Author: {post.username}</h2>
       <p>{post.content}</p>
       <p>
         <Link to={`/`}>Go back</Link>

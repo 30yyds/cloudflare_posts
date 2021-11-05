@@ -17,13 +17,13 @@ const Posts = () => {
   }, []);
 
   return (
-    <div>
+    <div align="center">
       <div>
         <h1>Posts</h1>
         {posts.map((post) => (
           <div key={post.id}>
             <h2>
-              <Link to={`/posts/${post.id}`}>{post.title}</Link>
+              <Link to={`/posts/${post.id}`}>{post.title} by {post.username}</Link>
             </h2>
           </div>
         ))}
