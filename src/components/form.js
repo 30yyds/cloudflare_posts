@@ -3,14 +3,14 @@ import { Link } from "@reach/router";
 
 export default class FormSubmission extends React.Component {
   
-  const handleSubmit = event => {
+  handleSubmit(event) => {
     event.preventDefault();
 
     const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts'
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title, username, content })
+        body: JSON.stringify(this.state)
     };
     fetch(url, requestOptions)
         .then(response => console.log('Created post successfully'))
@@ -20,7 +20,7 @@ export default class FormSubmission extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={this.handleSubmit.bind(this)}>
           <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Title</center></h2>
           </label>
