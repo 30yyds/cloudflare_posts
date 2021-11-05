@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 
 export default class FormSubmission extends React.Component {
   
-  handleSubmit(event) => {
+  handleSubmit(event) {
     event.preventDefault();
 
     const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts'
