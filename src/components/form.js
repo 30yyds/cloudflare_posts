@@ -10,11 +10,11 @@ export default class FormSubmission extends React.Component {
           <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Title</center></h2>
           </label>
-          <input class="center-block" type="text" required name="title" id="title" />
+          <input class="center-block" type="text" name="title" id="title" />
           <label htmlFor="username" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Username</center></h2>
           </label>
-          <input class="center-block" type="text" required name="username" id="username" />
+          <input class="center-block" type="text" name="username" id="username" />
           <label htmlFor="content" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Post Content</center></h2>
           </label>
@@ -29,12 +29,10 @@ export default class FormSubmission extends React.Component {
             defaultValue={''}
           />
           <button type="submit">Create Your Post</button>
+          <div>
+            <h2><center><Link to={`/create-post`}>Add New Post Here</Link></center></h2> 
+          </div>
         </form>
-        <div style="margin-top:10px">
-          <p>
-            <Link to="/">Go back</Link>
-          </p> 
-        </div>
       </div>
     );
   }
