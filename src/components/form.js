@@ -19,12 +19,10 @@ export default class FormSubmission extends React.Component {
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
         body: {"title":"Story About my Dogs","username":"kn0thing","content":"So the other day"}
     };
-    const response = fetch(url, requestOptions);
-    if (response.ok) {
-      return new Response(response)    
-    } else {
-      return new Response(response)    
-    }
+    const response = await fetch(url, requestOptions);
+    const results = await gatherResponse(response);
+    
+    return new Response(results, requestOptions);
         // .then(async response => {
         //   return new Response(response.json(), { status: 200 })
         // })
