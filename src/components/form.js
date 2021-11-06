@@ -17,7 +17,7 @@ export default class FormSubmission extends React.Component {
     const requestOptions = {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'POST',
         },
