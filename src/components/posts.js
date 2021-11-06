@@ -7,7 +7,7 @@ const Posts = () => {
   useEffect(() => {
     const getPosts = async () => {
       const resp = await fetch(
-        "https://serverless-api.30yyds.workers.dev/api/posts"
+        "https://sarahju.30yyds.workers.dev/api/posts"
       );
       const postsResp = await resp.json();
       setPosts(postsResp);
