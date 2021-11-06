@@ -20,10 +20,10 @@ export default class FormSubmission extends React.Component {
     };
     fetch(url, requestOptions)
         .then(async response => {
-          return new Response(response, { status: 200 })
+          return new Response(response.json(), { status: 200 })
         })
         .catch(error => {
-          return error
+          return Response("Not found", { status: 404 })
         });
   }
 
