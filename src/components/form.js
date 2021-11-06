@@ -7,20 +7,6 @@ export default class FormSubmission extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  async gatherResponse(response) {
-    const { headers } = response;
-    const contentType = headers.get("content-type") || "";
-    if (contentType.includes("application/json")) {
-      return JSON.stringify(await response.json());
-    } else if (contentType.includes("application/text")) {
-      return response.text();
-    } else if (contentType.includes("text/html")) {
-      return response.text();
-    } else {
-      return response.text();
-    }
-  }
-
   async handleSubmit(event) {
     event.preventDefault();
     
@@ -34,9 +20,8 @@ export default class FormSubmission extends React.Component {
         body: {"title":"Story About my Dogs","username":"kn0thing","content":"So the other day"}
     };
     const response = await fetch(url, requestOptions);
-    const results = await gatherResponse(response);
     
-    return new Response(results, requestOptions);
+    return new Response(response);
         // .then(async response => {
         //   return new Response(response.json(), { status: 200 })
         // })
