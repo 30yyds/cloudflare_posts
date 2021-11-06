@@ -28,7 +28,7 @@ export default class FormSubmission extends React.Component {
           return error
         });
 
-    return new Response(response);
+    // return new Response(response);
   }
 
   render() {
