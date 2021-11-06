@@ -7,7 +7,7 @@ export default class FormSubmission extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(event) {
+  async handleSubmit(event) {
     event.preventDefault();
     
     const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts';
