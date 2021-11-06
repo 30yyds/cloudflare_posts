@@ -17,7 +17,7 @@ export default class FormSubmission extends React.Component {
     const requestOptions = {
         method: 'POST',
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
-        body: value
+        body: {"title":"Story About my Dogs","username":"kn0thing","content":"So the other day"}
     };
     const response = fetch(url, requestOptions);
     if (response.ok) {
