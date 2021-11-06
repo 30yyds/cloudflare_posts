@@ -18,13 +18,18 @@ export default class FormSubmission extends React.Component {
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
         body: value
     };
-    fetch(url, requestOptions)
-        .then(async response => {
-          return new Response(response.json(), { status: 200 })
-        })
-        .catch(error => {
-          return Response("Not found", { status: 404 })
-        });
+    let response = await fetch(url, requestOptions);
+    if (response.ok) {
+      return new Response(response.json(), { status: 200 })    
+    } else {
+      return new Response(response.json(), { status: 404 })
+    }
+        // .then(async response => {
+        //   return new Response(response.json(), { status: 200 })
+        // })
+        // .catch(error => {
+        //   return Response("Not found", { status: 404 })
+        // });
   }
 
   render() {
