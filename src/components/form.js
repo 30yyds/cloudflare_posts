@@ -17,20 +17,20 @@ export default class FormSubmission extends React.Component {
     const requestOptions = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: [body]
+        body: body
     };
     
     fetch(url, requestOptions)
         .then(response => {
           console.debug(response);
-          return new Response(response, {headers});
+          return new Response(response, {requestOptions});
         })
         .catch(error => {
           console.error(error);
-          return new Error(error, {headers});
+          return new Error(error, {requestOptions});
         });
 
-    return new Response("Successfully created post!", {headers});
+    return new Response("Successfully created post!", {requestOptions});
   }
 
   render() {
