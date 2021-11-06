@@ -18,11 +18,13 @@ export default class FormSubmission extends React.Component {
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
         body: value
     };
-    return new Response("Successfully created post!", { status: 200 });
-      // fetch(url, requestOptions)
-      //     .then(async response => {return new Response(response)})
-      //     .catch(error => {return new Response(error)})
-    // );
+    fetch(url, requestOptions)
+        .then(async response => {
+          return new Response(response, { status: 200 })
+        })
+        .catch(error => {
+          return error
+        });
   }
 
   render() {
