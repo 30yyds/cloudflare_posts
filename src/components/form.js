@@ -7,7 +7,7 @@ export default class FormSubmission extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  async function gatherResponse(response) {
+  async gatherResponse(response) {
     const { headers } = response;
     const contentType = headers.get("content-type") || "";
     if (contentType.includes("application/json")) {
