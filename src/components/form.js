@@ -58,7 +58,7 @@ export default class FormSubmission extends React.Component {
             defaultValue={''}
           />
           <div>
-            <button type="submit" onClick={this.handleSubmit}>Create Your Post!</button>
+            <button type="submit">Create Your Post!</button>
           </div>  
           <div>
             <h2><center><Link to={`/`}>Go Back</Link></center></h2> 
