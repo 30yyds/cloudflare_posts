@@ -3,7 +3,8 @@ import { Link } from "@reach/router";
 
 export default class FormSubmission extends React.Component {
   constructor(props) {
-     super(props);
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(event) {
@@ -20,9 +21,9 @@ export default class FormSubmission extends React.Component {
     };
     const response = fetch(url, requestOptions);
     if (response.ok) {
-      return new Response(response.json(), { status: 200 })    
+      return new Response(response)    
     } else {
-      return new Response(response.json(), { status: 404 })
+      return new Response(response)    
     }
         // .then(async response => {
         //   return new Response(response.json(), { status: 200 })
@@ -59,7 +60,7 @@ export default class FormSubmission extends React.Component {
             defaultValue={''}
           />
           <div>
-            <button type="submit">Create Your Post!</button>
+            <button type="submit" onClick={this.handleSubmit}>Create Your Post!</button>
           </div>  
           <div>
             <h2><center><Link to={`/`}>Go Back</Link></center></h2> 
