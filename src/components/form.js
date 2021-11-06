@@ -11,21 +11,22 @@ export default class FormSubmission extends React.Component {
     event.preventDefault();
     
     const url = 'https://serverless-api.30yyds.workers.dev/api/create-posts';
-    const data = new FormData(event.target);
-    const value = Object.fromEntries(data.entries());
+    const formData = new FormData(event.target);
+    const body = JSON.stringify(Object.fromEntries(formData));
 
     const requestOptions = {
         method: 'POST',
         headers: { 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' },
-        body: {"title":"Story About my Dogs","username":"kn0thing","content":"So the other day"}
+        body: body
     };
     
     fetch(url, requestOptions)
-        .then(async response => {
-          return new Response(response, { status: 200 })
+        .then(function (response) {
+          return new Response(response, { status: 200 });
         })
-        .catch(error => {
-          return error
+        .catch(function (error) {
+          console.error(error);
+          return error;
         });
 
     // return new Response(response);
