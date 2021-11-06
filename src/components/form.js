@@ -22,22 +22,15 @@ export default class FormSubmission extends React.Component {
     
     fetch(url, requestOptions)
         .then(response => {
-          try {
-            if (response.ok) {
-              return response.clone().json()
-            } else {
-              throw new Error(response)
-            }
-          } catch (error) {
-            return error
-          }
+          console.debug(response);
+          return new Response(response);
         })
-        .catch(function (error) {
+        .catch(error => {
           console.error(error);
-          return error
+          return new Error(error);
         });
 
-    // return new Response(response);
+    return new Response("Successfully created post!");
   }
 
   render() {
