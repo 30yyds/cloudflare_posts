@@ -77,14 +77,14 @@ export default class FormSubmission extends React.Component {
           <div>
             <button type="submit">Create Your Post!</button>
           </div>
-          {this.state.resp == 'success' (
+          {this.state.resp === 'success' && (
             <Message
               positive
               header="Your post is created successfully!"
               content="You may now create a new post or go back to main page."
             />
           )}
-          {this.state.resp == 'error' (
+          {this.state.resp === 'error' && (
             <Message
               negative
               header="Something is wrong..."
