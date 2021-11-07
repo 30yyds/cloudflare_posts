@@ -15,7 +15,7 @@ export default class FormSubmission extends React.Component {
     const body = JSON.stringify(Object.fromEntries(formData));
 
     const requestOptions = {
-        method: 'OPTIONS',
+        method: 'POST',
         mode: 'no-cors',
         credentials: 'include',
         headers: {
