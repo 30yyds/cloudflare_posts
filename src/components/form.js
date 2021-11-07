@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "@reach/router";
+import { Message, Form } from "semantic-ui-react";
 
 export default class FormSubmission extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this)
   }
+
+  const [status, setStatus] = useState(undefined);
 
   async handleSubmit(event) {
     event.preventDefault();
@@ -22,7 +25,7 @@ export default class FormSubmission extends React.Component {
           'Content-Type': 'application/json',
           'Access-Control-Request-Headers': 'Content-Type',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS, POST',
+          'Access-Control-Allow-Methods': 'POST',
         },
         body: body
     };
@@ -30,14 +33,14 @@ export default class FormSubmission extends React.Component {
     fetch(url, requestOptions)
         .then(response => {
           console.debug(response);
+          setStatus({type: 'sucess'});
           return new Response(response, {requestOptions});
         })
         .catch(error => {
           console.error(error);
+          setStatus({type: 'error', error});
           return new Error(error, {requestOptions});
         });
-
-    return new Response("Successfully created post!", {requestOptions});
   }
 
   render() {
@@ -68,7 +71,21 @@ export default class FormSubmission extends React.Component {
           />
           <div>
             <button type="submit">Create Your Post!</button>
-          </div>  
+          </div>
+          {status.type == 'success' (
+            <Message
+              positive
+              header="Your post is created successfully!"
+              content="You may now create a new post or go back to main page."
+            />
+          )}
+          {status.type == 'error' (
+            <Message
+              negative
+              header="Something is wrong..."
+              content="Please check the inputs. Otherwise please contact server admin."
+            />
+          )}
           <div>
             <h2><center><Link to={`/`}>Go Back</Link></center></h2> 
           </div>
