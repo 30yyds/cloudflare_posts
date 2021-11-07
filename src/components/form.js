@@ -2,7 +2,7 @@ import { Link } from "@reach/router";
 import { Message, Form } from "semantic-ui-react";
 
 export default class FormSubmission extends React.Component {
-  var status;
+  var status = '';
 
   constructor(props) {
     super(props);
