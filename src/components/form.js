@@ -55,11 +55,11 @@ export default class FormSubmission extends React.Component {
           <label htmlFor="title" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Title</center></h2>
           </label>
-          <input border="solid 1px black" type="text" name="title" id="title" placeholder="Enter title" />
+          <input border="solid 1px black" type="text" name="title" id="title" placeholder="Enter title" required/>
           <label htmlFor="username" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Username</center></h2>
           </label>
-          <input border="solid 1px black" type="text" name="username" id="username" placeholder="Enter author name"/>
+          <input border="solid 1px black" type="text" name="username" id="username" placeholder="Enter author name" required/>
           <label htmlFor="content" className="block text-sm font-medium text-warm-gray-900">
             <h2><center>Content</center></h2>
           </label>
@@ -75,7 +75,7 @@ export default class FormSubmission extends React.Component {
             defaultValue={''}
           />
           <div>
-            <button type="submit">Create Your Post!</button>
+            <button background-color="#4CAF50" type="submit">Create Your Post!</button>
           </div>
           {this.state.resp === 'success' && (
             <Message
