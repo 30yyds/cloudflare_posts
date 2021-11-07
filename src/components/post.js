@@ -23,9 +23,9 @@ const Post = ({ id }) => {
       <h1>{post.title}</h1>
       <h2>Author: {post.username}</h2>
       <p>{post.content}</p>
-      <p>
+      <h2>
         <Link to={`/`}>Go back</Link>
-      </p>
+      </h2>
     </div>
   );
 };
