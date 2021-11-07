@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "@reach/router";
 import { Message, Form } from "semantic-ui-react";
 
-const [status, setStatus] = useState(undefined);
-
 export default class FormSubmission extends React.Component {
+  const [status, setStatus] = useState(0);
+
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this)
