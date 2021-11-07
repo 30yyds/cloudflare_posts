@@ -75,7 +75,7 @@ export default class FormSubmission extends React.Component {
             defaultValue={''}
           />
           <div>
-            <button background-color="#4CAF50" type="submit">Create Your Post!</button>
+            <button class="btn btn-primary btn-lg" type="submit">Create Your Post!</button>
           </div>
           {this.state.resp === 'success' && (
             <Message
