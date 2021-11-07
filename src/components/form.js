@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "@reach/router";
 import { Message, Form } from "semantic-ui-react";
 
 export default class FormSubmission extends React.Component {
-  const [status, setStatus] = useState(0);
+  let status = undefined;
 
   constructor(props) {
     super(props);
@@ -33,12 +32,12 @@ export default class FormSubmission extends React.Component {
     fetch(url, requestOptions)
         .then(response => {
           console.debug(response);
-          setStatus({type: 'sucess'});
+          status = 'success';
           return new Response(response, {requestOptions});
         })
         .catch(error => {
           console.error(error);
-          setStatus({type: 'error', error});
+          status = 'error';
           return new Error(error, {requestOptions});
         });
   }
@@ -72,14 +71,14 @@ export default class FormSubmission extends React.Component {
           <div>
             <button type="submit">Create Your Post!</button>
           </div>
-          {status.type == 'success' (
+          {status == 'success' (
             <Message
               positive
               header="Your post is created successfully!"
               content="You may now create a new post or go back to main page."
             />
           )}
-          {status.type == 'error' (
+          {status == 'error' (
             <Message
               negative
               header="Something is wrong..."
